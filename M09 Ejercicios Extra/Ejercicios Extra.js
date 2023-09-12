@@ -6,6 +6,15 @@ function deObjetoAarray(objeto) {
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
+   var arregloResultante = [];
+
+   for (var clave in objeto) {
+     if (objeto.hasOwnProperty(clave)) {
+       arregloResultante.push([clave, objeto[clave]]);
+     }
+   }
+ 
+   return arregloResultante;
 }
 
 function numberOfCharacters(string) {
